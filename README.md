@@ -1,4 +1,4 @@
-# folded_binomial_regression
+# Folded-Binomial regression
 
 
 Example based on simulation can be run with sh driver_key.sh.
