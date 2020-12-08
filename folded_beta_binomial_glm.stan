@@ -2,6 +2,9 @@ functions {
   real folded_beta_binomial_log(int y, int n, real p, real conc) {
     real log_proby; 
     log_proby = log_sum_exp( beta_binomial_log(y, n, conc*p, conc*(1.0-p)), beta_binomial_log(y, n, conc*(1.0-p), conc*p));
+    if ((y+y)==n) {
+      log_proby = log_proby + log(0.5);
+    }
     return log_proby;
   }
 }
